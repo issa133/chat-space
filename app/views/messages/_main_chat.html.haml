@@ -10,5 +10,12 @@
     .Chatmain-heder_edit
       = link_to '#', class: "Chatmain-heder_edit__Button" do
         Edit
-  .Chatmain-groups
+  .Chatmain-message
   .chatmain-bottom
+    %form.Form
+      .Form__contents
+        %input.Form__inputContent{type: 'text', placeholder: 'type a message'}
+        %label.Form__inputImage
+          = icon('far', 'image', class: 'Form__icon')
+          %input.Hidden{type: 'file'}
+      %input.Form__submit{type: 'submit', value: 'Send'}
