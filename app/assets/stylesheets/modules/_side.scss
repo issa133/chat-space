@@ -1,0 +1,56 @@
+.Chatside {
+  background-color:#253141 ;
+  width:300px ;
+}
+.Chatside-header {
+  background-color: #253141;
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.Contents {
+  color: #ffffff;
+  height: 20px;
+  width: 260px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Contents-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.Contents-icon {
+  display: flex;
+  justify-content: end;
+  &__btn{
+    color: #ffffff;
+  &--config{
+    margin-left: 5px;
+    }
+  }
+}
+
+.Chatside-groups {
+  background-color: #2f3e51;
+  padding: 0 20px;
+  height:calc(100vh - 100px) ;
+  overflow: scroll;
+}
+
+.Grouplist {
+  padding: 20px 0 40px;
+  box-sizing: border-box;
+  color: #ffffff;;
+}
+.Group-name {
+  font-size: 15px;
+
+}
+.Group-message {
+  font-size: 11px;
+  margin-top: 5px;
+}

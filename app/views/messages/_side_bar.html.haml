@@ -1,0 +1,17 @@
+.Chatside
+  .Chatside-header
+    .Contents
+      .Contents-name
+        name
+      .Contents-icon
+        = link_to "#", class: "Contents-icon__btn Contents-icon__btn--edit" do
+          = icon('far', 'edit')
+        = link_to "#", class: "Contents-icon__btn Contents-icon__btn--config"  do
+          = icon('fa', 'cog')
+  .Chatside-groups
+    .Grouplist
+      = link_to '#' do
+        .Group-name
+        name
+        .Group-message
+        新着メッセージはありません

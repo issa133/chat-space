@@ -1,0 +1,123 @@
+.wrapper{
+  display: flex;
+  height: 100vh;
+}
+
+.Chatmain {
+  background-color: #ffffff;
+  width: calc(100vw - 300px);
+}
+
+.Chatmain-heder {
+  background-color: #ffffff;
+  padding: 0 40px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between; 
+  &__groupname{
+    color: #333333;
+    font-size: 20px;
+    margin-top: 35px;
+  }
+}
+
+.Chatmain-heder__groupmenberlist{
+  color: #999999;
+  font-size: 12px;
+  margin-top: 15px;
+  display: flex;
+}
+
+.Chatmain-heder_edit {
+  margin-top: 28px;
+  padding: 0 20px;
+  display: block;
+  line-height: 40px;
+  border: 1px solid #38AEF0;
+  height: 40px;
+  &__Button {
+  color: #38aef0;
+  text-decoration: none;
+  }
+}
+
+.Chatmain-message {
+  background-color: #fafafa;
+  box-sizing: border-box;
+  padding: 35px 40px 0;
+  height: calc(100vh - 100px - 90px);
+  overflow: scroll;
+}
+
+.MessageArea{
+  margin-bottom: 46px;
+}
+
+.Message {
+  display: flex;
+  &__name {
+    color: #434a54;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__time {
+    color: #999;
+    font-size: 12px;
+    padding-left: 10px;
+  }
+}
+.Message {
+  margin-top: 12px;
+  &__text {
+    color: #434a54;
+    font-size: 14px;
+  }
+  &__image{
+    height: 300px;
+  }
+}
+
+.chatmain-bottom {
+  background-color: #dddddd;
+  box-sizing: border-box;
+  height: 90px;
+  padding: 20px 50px 20px 40px;
+}
+
+.Form{
+  display: flex;
+  justify-content: space-between;
+  &__contents{
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+  }
+  &__inputContent {
+    height: 50px;
+    width: 100%;
+    padding: 0 45px 0 15px;
+    border: none;
+  }
+  &__inputImage {
+    height: 50px;
+    position: absolute;
+    right: 10px;
+  }
+  .fa-image {
+    font-size: 25px;
+    line-height: 50px;
+  }
+
+  &__submit {
+    background-color: #38AEF0;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 30px;
+    height: 50px;
+    margin-left: 15px;
+    border: none;
+  }
+  .Hidden {
+    display: none;
+  }
+}
