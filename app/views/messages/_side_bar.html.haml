@@ -2,7 +2,7 @@
   .Chatside-header
     .Contents
       .Contents-name
-        name
+        = current_user.name
       .Contents-icon
         = link_to "#", class: "Contents-icon__btn Contents-icon__btn--edit" do
           = icon('far', 'edit')
@@ -10,7 +10,7 @@
           = icon('fa', 'cog')
   .Chatside-groups
     .Grouplist
-      = link_to '#' do
+      = link_to edit_user_path(current_user) do
         .Group-name
         name
         .Group-message
