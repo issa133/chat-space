@@ -4,7 +4,7 @@
       .Contents-name
         = current_user.name
       .Contents-icon
-        = link_to "#", class: "Contents-icon__btn Contents-icon__btn--edit" do
+        = link_to new_group_path, class: "Contents-icon__btn Contents-icon__btn--edit" do
           = icon('far', 'edit')
         = link_to "#", class: "Contents-icon__btn Contents-icon__btn--config"  do
           = icon('fa', 'cog')
