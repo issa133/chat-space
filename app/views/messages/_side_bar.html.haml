@@ -9,9 +9,10 @@
         = link_to "#", class: "Contents-icon__btn Contents-icon__btn--config"  do
           = icon('fa', 'cog')
   .Chatside-groups
-    .Grouplist
-      = link_to edit_user_path(current_user) do
-        .Group-name
-        name
-        .Group-message
-        新着メッセージはありません
+    - current_user.groups.each do |group|
+      .Grouplist
+        = link_to '#' do
+          .Group-name
+            = group.name
+          .Group-message
+            メッセージはまだありません
