@@ -8,23 +8,16 @@
         .Chatmain-heder__groupmenber
           name
     .Chatmain-heder_edit
-      = link_to '#', class: "Chatmain-heder_edit__Button" do
+      = link_to new_group_path, class: "Chatmain-heder_edit__Button" do
         Edit
   .Chatmain-message
     .MessageArea
-      .Message
-        .Message__name
-          name
-        .Message__time
-          2020/2/10 15:00
-      .Message
-        .Message__text
-          疲れた
+      = render @messages
   .chatmain-bottom
-    %form.Form
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__contents
-        %input.Form__inputContent{type: 'text', placeholder: 'type a message'}
-        %label.Form__inputImage
+        = f.text_field :content, class: 'Form__inputContent', placeholder: 'type a message'
+        = f.label :image, class: 'Form__inputImage' do
           = icon('far', 'image', class: 'Form__icon')
-          %input.Hidden{type: 'file'}
-      %input.Form__submit{type: 'submit', value: 'Send'}
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'Form__submit'
