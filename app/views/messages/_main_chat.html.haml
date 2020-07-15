@@ -2,13 +2,14 @@
   .Chatmain-heder
     .Chatmain-heder__group
       .Chatmain-heder__groupname
-        name
+        = @group.name
       .Chatmain-heder__groupmenberlist
         Menber：
         .Chatmain-heder__groupmenber
-          name
+        - @group.group_users.each do |menber|
+          = menber.user.name
     .Chatmain-heder_edit
-      = link_to new_group_path, class: "Chatmain-heder_edit__Button" do
+      = link_to edit_group_path(@group), class: "Chatmain-heder_edit__Button" do
         Edit
   .Chatmain-message
     .MessageArea
