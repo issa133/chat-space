@@ -2,17 +2,17 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class="MessageBox">
-          <div class="MessageInfo">
-            <div class="MessageInfo__userName">
+        `<div class=".MessageArea-box">
+          <div class=".MessageInfo">
+            <div class="Message__name">
               ${message.user_name}
             </div>
-            <div class="MessageInfo__date">
+            <div class="Message__time">
               ${message.created_at}
             </div>
           </div>
           <div class="Message">
-            <p class="Message__content">
+            <p class="Message__text">
               ${message.content}
             </p>
             <img class="Message__image" src="${message.image}">
@@ -21,17 +21,17 @@ $(function(){
       return html;
     } else {
       let html =
-      `<div class="MessageBox">
+      `<div class="MessageArea-box">
         <div class="MessageInfo">
-          <div class="MessageInfo__userName">
+          <div class="Message__name">
             ${message.user_name}
           </div>
-          <div class="MessageInfo__date">
+          <div class="Message__time">
             ${message.created_at}
           </div>
         </div>
         <div class="Message">
-          <p class="Message__content">
+          <p class="Message__text">
             ${message.content}
           </p>
         </div>
@@ -54,8 +54,10 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.MessageField').append(html);      
-      $('form')[0].reset();
+      console.log(data)
+      $('.Chatmain-message').append(html);   
+      $('.Chatmain-message').animate({ scrollTop: $('.Chatmain-message')[0].scrollHeight});
+      $('Form')[0].reset();
     })
   });
 });
