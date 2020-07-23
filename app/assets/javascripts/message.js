@@ -58,6 +58,10 @@ $(function(){
       $('.Chatmain-message').append(html);   
       $('.Chatmain-message').animate({ scrollTop: $('.Chatmain-message')[0].scrollHeight});
       $('Form')[0].reset();
+      $('.Form__submit').removeAttr('disabled');
     })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
+  });
   });
 });
