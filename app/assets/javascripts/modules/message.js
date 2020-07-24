@@ -54,7 +54,6 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      console.log(data)
       $('.Chatmain-message').append(html);   
       $('.Chatmain-message').animate({ scrollTop: $('.Chatmain-message')[0].scrollHeight});
       $('Form')[0].reset();
