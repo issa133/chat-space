@@ -6,7 +6,7 @@
       .Contents-icon
         = link_to new_group_path, class: "Contents-icon__btn Contents-icon__btn--edit" do
           = icon('far', 'edit')
-        = link_to '#', class: "Contents-icon__btn Contents-icon__btn--config"  do
+        = link_to edit_user_path(current_user), class: "Contents-icon__btn Contents-icon__btn--config"  do
           = icon('fa', 'cog')
   .Chatside-groups
     - current_user.groups.each do |group|
