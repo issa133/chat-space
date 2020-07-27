@@ -2,8 +2,8 @@ $(function(){
   function buildHTML(message){
     if ( message.image ) {
       let html =
-        `<div class=".MessageArea-box" data-message-id=${message.id}>
-          <div class=".MessageInfo">
+        `<div class="MessageArea-box" data-message-id=${message.id}>
+          <div class="MessageInfo">
             <div class="Message__name">
               ${message.user_name}
             </div>
